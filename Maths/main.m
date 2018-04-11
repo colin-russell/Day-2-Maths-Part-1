@@ -16,6 +16,8 @@ int main(int argc, const char * argv[]) {
         
         BOOL gameOn = YES;
         ScoreKeeper * sk = [[ScoreKeeper alloc]init];
+        sk.wrong = 0;
+        sk.right = 0;
         
         while (gameOn == YES) {
             AdditionQuestion *questionmark = [[AdditionQuestion alloc] init];

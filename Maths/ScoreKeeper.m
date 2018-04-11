@@ -11,7 +11,8 @@
 @implementation ScoreKeeper
 
 -(NSString*)getScore {
-    float score = (_right / (_wrong +_right)) * 100;
+    float total = _wrong + _right;
+    float score = (_right / total) * 100;
     return [NSString stringWithFormat:@"Score: %d right, %d wrong ----- %f %%", _right, _wrong, score];
 }
 
